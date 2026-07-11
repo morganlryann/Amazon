@@ -1,0 +1,1739 @@
+/* ======================================================
+   Around The House Essentials
+   Part 2A-1
+   Design System + Global Styles
+====================================================== */
+
+/* ---------- CSS Variables ---------- */
+
+:root {
+
+    --primary: #111111;
+    --secondary: #666666;
+    --background: #fafafa;
+    --surface: #ffffff;
+    --border: #e7e7e7;
+
+    --accent: #0a84ff;
+    --accent-hover: #0066d6;
+
+    --success: #22c55e;
+    --danger: #ef4444;
+
+    --shadow-small: 0 2px 8px rgba(0,0,0,.06);
+    --shadow-medium: 0 10px 30px rgba(0,0,0,.08);
+    --shadow-large: 0 20px 50px rgba(0,0,0,.12);
+
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-lg: 28px;
+
+    --transition: .25s ease;
+
+    --max-width: 1240px;
+
+}
+
+/* ---------- Dark Theme ---------- */
+
+body.dark {
+
+    --primary: #ffffff;
+    --secondary: #bdbdbd;
+
+    --background: #111111;
+    --surface: #1d1d1f;
+
+    --border: #303030;
+
+    --shadow-small: none;
+    --shadow-medium: none;
+    --shadow-large: none;
+
+}
+
+/* ---------- Reset ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ---------- Smooth Scroll ---------- */
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* ---------- Body ---------- */
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    background:var(--background);
+
+    color:var(--primary);
+
+    line-height:1.6;
+
+    transition:
+        background .3s ease,
+        color .3s ease;
+
+}
+
+/* ---------- Images ---------- */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+/* ---------- Links ---------- */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+/* ---------- Lists ---------- */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* ---------- Buttons ---------- */
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+/* ---------- Inputs ---------- */
+
+input{
+
+    font-family:inherit;
+
+    outline:none;
+
+}
+
+/* ---------- Container ---------- */
+
+.container{
+
+    width:min(92%, var(--max-width));
+
+    margin-inline:auto;
+
+}
+
+/* ---------- Typography ---------- */
+
+h1{
+
+    font-size:clamp(2.8rem,6vw,5rem);
+
+    line-height:1.05;
+
+    letter-spacing:-2px;
+
+    font-weight:700;
+
+}
+
+h2{
+
+    font-size:clamp(2rem,4vw,3rem);
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+h3{
+
+    font-size:1.25rem;
+
+    font-weight:600;
+
+}
+
+h4{
+
+    font-size:1rem;
+
+    font-weight:600;
+
+}
+
+p{
+
+    color:var(--secondary);
+
+    font-size:1.05rem;
+
+}
+
+/* ---------- Section Spacing ---------- */
+
+section{
+
+    padding:90px 0;
+
+}
+
+/* ---------- Utility ---------- */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.hidden{
+
+    display:none !important;
+
+}
+
+/* ======================================================
+   Primary Button
+====================================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.6rem;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:14px 28px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--shadow-medium);
+
+}
+
+body.dark .btn{
+
+    background:white;
+
+    color:#111;
+
+}
+
+/* ======================================================
+   Secondary Button
+====================================================== */
+
+.btn-outline{
+
+    background:transparent;
+
+    border:1px solid var(--border);
+
+    color:var(--primary);
+
+    padding:14px 28px;
+
+    border-radius:999px;
+
+    transition:var(--transition);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--surface);
+
+    box-shadow:var(--shadow-small);
+
+}
+
+/* ======================================================
+   Card Base
+====================================================== */
+
+.card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    transition:all .3s ease;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-large);
+
+}
+
+/* ======================================================
+   Small Section Heading
+====================================================== */
+
+.section-label{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#ececec;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    color:#444;
+
+    margin-bottom:18px;
+
+}
+
+body.dark .section-label{
+
+    background:#2a2a2a;
+
+    color:#ddd;
+
+}
+
+/* ======================================================
+   Divider
+====================================================== */
+
+.divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:var(--border);
+
+    margin:80px 0;
+
+}
+
+/* ======================================================
+   Fade Animation
+====================================================== */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:.7s ease;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ======================================================
+   Scroll To Top Button
+====================================================== */
+
+#scrollTop{
+
+    position:fixed;
+
+    right:24px;
+
+    bottom:24px;
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:var(--transition);
+
+    z-index:500;
+
+}
+
+#scrollTop.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+body.dark #scrollTop{
+
+    background:white;
+
+    color:#111;
+
+}
+
+/* ======================================================
+   PART 2A-2
+   Navigation + Hero
+====================================================== */
+
+/* =============================
+   Navigation
+============================= */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    width:100%;
+
+    height:78px;
+
+    padding:0 6%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(0,0,0,.05);
+
+    transition:all .3s ease;
+
+}
+
+body.dark .navbar{
+
+    background:rgba(17,17,17,.88);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+/* =============================
+   Logo
+============================= */
+
+.logo a{
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+    letter-spacing:-0.5px;
+
+    color:var(--primary);
+
+    transition:.25s;
+
+}
+
+.logo a:hover{
+
+    opacity:.7;
+
+}
+
+/* =============================
+   Navigation Links
+============================= */
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:38px;
+
+}
+
+nav a{
+
+    position:relative;
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    color:var(--secondary);
+
+    transition:.25s;
+
+}
+
+nav a:hover{
+
+    color:var(--primary);
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* =============================
+   Right Side Buttons
+============================= */
+
+.nav-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+/* =============================
+   Dark Mode Button
+============================= */
+
+#darkModeToggle{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1rem;
+
+    transition:.25s;
+
+}
+
+#darkModeToggle:hover{
+
+    transform:rotate(15deg);
+
+    box-shadow:var(--shadow-small);
+
+}
+
+/* =============================
+   Hero Section
+============================= */
+
+.hero{
+
+    min-height:85vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:120px 20px 80px;
+
+}
+
+/* =============================
+   Hero Content
+============================= */
+
+.hero-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+/* =============================
+   Hero Tag
+============================= */
+
+.hero-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#ececec;
+
+    color:#555;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    margin-bottom:28px;
+
+}
+
+body.dark .hero-tag{
+
+    background:#2b2b2b;
+
+    color:#ddd;
+
+}
+
+/* =============================
+   Hero Heading
+============================= */
+
+.hero h1{
+
+    max-width:850px;
+
+    margin:auto;
+
+    margin-bottom:26px;
+
+}
+
+/* =============================
+   Hero Description
+============================= */
+
+.hero p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    font-size:1.15rem;
+
+    color:var(--secondary);
+
+    margin-bottom:42px;
+
+}
+
+/* =============================
+   Hero Search
+============================= */
+
+.hero-search{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:14px;
+
+    max-width:720px;
+
+    margin:auto;
+
+    flex-wrap:wrap;
+
+}
+
+/* =============================
+   Search Input
+============================= */
+
+.hero-search input{
+
+    flex:1;
+
+    min-width:280px;
+
+    height:60px;
+
+    padding:0 22px;
+
+    border-radius:999px;
+
+    border:1px solid var(--border);
+
+    background:var(--surface);
+
+    color:var(--primary);
+
+    font-size:1rem;
+
+    transition:.25s;
+
+}
+
+.hero-search input:focus{
+
+    border-color:var(--accent);
+
+    box-shadow:0 0 0 4px rgba(10,132,255,.12);
+
+}
+
+/* =============================
+   Search Button
+============================= */
+
+.hero-search button{
+
+    height:60px;
+
+    padding:0 32px;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.hero-search button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--shadow-medium);
+
+}
+
+body.dark .hero-search button{
+
+    background:white;
+
+    color:#111;
+
+}
+
+/* =============================
+   Hero Fade In
+============================= */
+
+.hero-content{
+
+    animation:heroFade .9s ease;
+
+}
+
+@keyframes heroFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =============================
+   Mobile Navigation
+============================= */
+
+@media (max-width:900px){
+
+    nav{
+
+        display:none;
+
+    }
+
+    .navbar{
+
+        padding:0 24px;
+
+    }
+
+}
+
+/* =============================
+   Mobile Hero
+============================= */
+
+@media (max-width:768px){
+
+    .hero{
+
+        min-height:70vh;
+
+        padding-top:90px;
+
+    }
+
+    .hero-search{
+
+        flex-direction:column;
+
+    }
+
+    .hero-search input{
+
+        width:100%;
+
+        min-width:unset;
+
+    }
+
+    .hero-search button{
+
+        width:100%;
+
+    }
+
+}
+
+/* ======================================================
+   PART 2A-3
+   Categories + Featured Banner + Product Grid
+======================================================*/
+
+/* =============================
+   Category Section
+============================= */
+
+.categories{
+
+    width:min(92%, var(--max-width));
+
+    margin:0 auto;
+
+    padding:20px 0 60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+}
+
+/* =============================
+   Category Buttons
+============================= */
+
+.category{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    color:var(--secondary);
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    transition:all .25s ease;
+
+}
+
+.category:hover{
+
+    transform:translateY(-2px);
+
+    color:var(--primary);
+
+    box-shadow:var(--shadow-small);
+
+}
+
+.category.active{
+
+    background:var(--primary);
+
+    color:white;
+
+    border-color:var(--primary);
+
+}
+
+body.dark .category.active{
+
+    background:white;
+
+    color:#111;
+
+}
+
+/* =============================
+   Featured Banner
+============================= */
+
+.featured-banner{
+
+    width:min(92%, var(--max-width));
+
+    margin:0 auto 70px;
+
+    padding:70px 50px;
+
+    border-radius:32px;
+
+    background:linear-gradient(
+        135deg,
+        #111,
+        #2a2a2a
+    );
+
+    color:white;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.featured-banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    top:-180px;
+
+    right:-150px;
+
+}
+
+.featured-banner::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.04);
+
+    bottom:-140px;
+
+    left:-100px;
+
+}
+
+.featured-banner h2{
+
+    position:relative;
+
+    z-index:2;
+
+    color:white;
+
+    margin-bottom:16px;
+
+}
+
+.featured-banner p{
+
+    position:relative;
+
+    z-index:2;
+
+    color:rgba(255,255,255,.8);
+
+    max-width:650px;
+
+    margin:0 auto;
+
+    font-size:1.1rem;
+
+}
+
+/* =============================
+   Product Section
+============================= */
+
+.products-section{
+
+    width:min(92%, var(--max-width));
+
+    margin:auto;
+
+    padding-bottom:100px;
+
+}
+
+/* =============================
+   Product Grid
+============================= */
+
+.product-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px,1fr));
+
+    gap:34px;
+
+    align-items:start;
+
+}
+
+/* =============================
+   Empty State
+============================= */
+
+.empty-state{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:100px 30px;
+
+    border:2px dashed var(--border);
+
+    border-radius:24px;
+
+}
+
+.empty-state h3{
+
+    margin-bottom:14px;
+
+}
+
+.empty-state p{
+
+    color:var(--secondary);
+
+}
+
+/* =============================
+   Loading Skeleton
+============================= */
+
+.skeleton{
+
+    height:420px;
+
+    border-radius:28px;
+
+    background:linear-gradient(
+        90deg,
+        #efefef 25%,
+        #f7f7f7 50%,
+        #efefef 75%
+    );
+
+    background-size:300% 100%;
+
+    animation:skeletonLoading 1.5s infinite;
+
+}
+
+body.dark .skeleton{
+
+    background:linear-gradient(
+        90deg,
+        #232323 25%,
+        #303030 50%,
+        #232323 75%
+    );
+
+    background-size:300% 100%;
+
+}
+
+@keyframes skeletonLoading{
+
+    from{
+
+        background-position:100% 0;
+
+    }
+
+    to{
+
+        background-position:-100% 0;
+
+    }
+
+}
+
+/* =============================
+   Section Heading
+============================= */
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-heading p{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/* =============================
+   Product Count
+============================= */
+
+.product-count{
+
+    margin-bottom:35px;
+
+    font-size:.95rem;
+
+    color:var(--secondary);
+
+}
+
+/* =============================
+   Responsive
+============================= */
+
+@media (max-width:992px){
+
+    .featured-banner{
+
+        padding:55px 35px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .categories{
+
+        justify-content:flex-start;
+
+        overflow-x:auto;
+
+        flex-wrap:nowrap;
+
+        padding-bottom:30px;
+
+    }
+
+    .categories::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+    .featured-banner{
+
+        border-radius:22px;
+
+        padding:45px 25px;
+
+    }
+
+    .product-grid{
+
+        grid-template-columns:1fr;
+
+        gap:24px;
+
+    }
+
+}
+
+/* ======================================================
+   PART 2B-1
+   Premium Product Cards
+======================================================*/
+
+/* =============================
+   Product Card
+============================= */
+
+.product-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    transition:all .35s ease;
+
+    box-shadow:var(--shadow-small);
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-large);
+
+}
+
+/* =============================
+   Product Image
+============================= */
+
+.product-image{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:1 / 1;
+
+    overflow:hidden;
+
+    background:#f6f6f6;
+
+}
+
+body.dark .product-image{
+
+    background:#222;
+
+}
+
+.product-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .5s ease;
+
+}
+
+.product-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/* =============================
+   Product Badge
+============================= */
+
+.product-badge{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:#111;
+
+    color:white;
+
+    font-size:.75rem;
+
+    font-weight:600;
+
+    letter-spacing:.3px;
+
+    z-index:5;
+
+}
+
+body.dark .product-badge{
+
+    background:white;
+
+    color:#111;
+
+}
+
+/* =============================
+   Favorite Button
+============================= */
+
+.favorite-btn{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.95);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    box-shadow:var(--shadow-small);
+
+    transition:.25s;
+
+    z-index:5;
+
+}
+
+.favorite-btn:hover{
+
+    transform:scale(1.08);
+
+}
+
+body.dark .favorite-btn{
+
+    background:#333;
+
+}
+
+/* =============================
+   Card Content
+============================= */
+
+.product-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    padding:28px;
+
+}
+
+/* =============================
+   Category
+============================= */
+
+.product-category{
+
+    font-size:.82rem;
+
+    color:var(--accent);
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+}
+
+/* =============================
+   Product Title
+============================= */
+
+.product-title{
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    line-height:1.3;
+
+    color:var(--primary);
+
+}
+
+/* =============================
+   Rating
+============================= */
+
+.product-rating{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:.95rem;
+
+    color:#f6a623;
+
+}
+
+.product-rating span{
+
+    color:var(--secondary);
+
+}
+
+/* =============================
+   Description
+============================= */
+
+.product-description{
+
+    color:var(--secondary);
+
+    font-size:.98rem;
+
+    line-height:1.7;
+
+}
+
+/* =============================
+   Recommendation List
+============================= */
+
+.product-benefits{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.product-benefits li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--secondary);
+
+    font-size:.95rem;
+
+}
+
+.product-benefits li::before{
+
+    content:"✓";
+
+    color:var(--success);
+
+    font-weight:700;
+
+}
+
+/* =============================
+   Card Footer
+============================= */
+
+.product-footer{
+
+    margin-top:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding-top:12px;
+
+}
+
+/* =============================
+   Price
+============================= */
+
+.product-price{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.product-price strong{
+
+    font-size:1.25rem;
+
+    color:var(--primary);
+
+}
+
+.product-price small{
+
+    color:var(--secondary);
+
+}
+
+/* =============================
+   Amazon Button
+============================= */
+
+.amazon-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:14px 24px;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:all .25s ease;
+
+}
+
+.amazon-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--shadow-medium);
+
+}
+
+body.dark .amazon-btn{
+
+    background:#fff;
+
+    color:#111;
+
+}
+
+/* =============================
+   Image Loading
+============================= */
+
+.product-image img[loading="lazy"]{
+
+    opacity:0;
+
+    transition:opacity .35s ease;
+
+}
+
+.product-image img.loaded{
+
+    opacity:1;
+
+}
+
+/* =============================
+   Card Entrance Animation
+============================= */
+
+.product-card{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+.product-card.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:
+        opacity .5s ease,
+        transform .5s ease;
+
+}
+
+/* =============================
+   Mobile
+============================= */
+
+@media (max-width:768px){
+
+    .product-content{
+
+        padding:22px;
+
+    }
+
+    .product-title{
+
+        font-size:1.2rem;
+
+    }
+
+    .product-footer{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .amazon-btn{
+
+        width:100%;
+
+    }
+
+}
