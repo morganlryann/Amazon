@@ -1,0 +1,168 @@
+[
+    {
+        "id":1,
+        
+        "featured":true,
+        
+        "room":"Living Room",
+        
+        "category":"Cleaning",
+        
+        "badge":"Best Seller",
+        
+        "name":"5-Gallon Vacmaster",
+        
+        "brand":"Vacmaster",
+        
+        "price":74.99,
+        
+        "salePrice":null,
+        
+        "image":"images/vacmaster.webp",
+        
+        "description":
+        "My go-to vaccum to manage all the dog hair!",
+        
+        "amazon":
+            "https://amzn.to/4vnHROo"
+},
+    {
+        "id":2,
+        
+        "featured":true,
+        
+        "room":"Office",
+        
+        "category":"Work",
+        
+        "badge":"Favorite",
+        
+        "name":"Standing Desk",
+        
+        "brand":"Flexispot",
+        
+        "price":104.49,
+        
+        "salePrice":null,
+        
+        "image":"images/standingdesk.webp",
+        
+        "description":
+        "Height-adjustable standing desk that makes working from home much more comfortable.",        
+       
+        "amazon":
+            "https://amzn.to/44qVcub"
+
+},
+    {
+       "id":3,
+        
+        "featured":true,
+        
+        "room":"Kitchen",
+        
+        "category":"Cooking",
+        
+        "badge":"Featured",
+        
+        "name":"Ninja Creami Ice Cream Maker",
+        
+        "brand":"Ninja",
+        
+        "price":219.99,
+        
+        "salePrice":null,
+        
+        "image":"images/ninjacreami.webp",
+        
+        "description":
+        "Making ice cream has never been easier! This kitchen gadget is my favorite during the summer.",
+        
+        "amazon":
+            "https://amzn.to/4b8Sm0T" 
+},
+
+    {
+        "id":4,
+         
+         "featured":false,
+         
+         "room":"Office",
+         
+         "category":"Exercise",
+         
+         "badge":"Products",
+         
+         "name":"Mini Under Desk Elliptical",
+         
+         "brand":"Amazon",
+         
+         "price":89.96,
+         
+         "salePrice":null,
+         
+         "image":"images/deskelliptical.webp",
+         
+         "description":
+         "Love this little machine, it's super quiet and great on days I need to move.",
+         
+         "amazon":
+             "https://amzn.to/4ptqgDd"
+},
+
+{
+    "id":5,
+     
+     "featured":false,
+     
+     "room":"Bedroom",
+     
+     "category":"Bedding",
+     
+     "badge":"Products",
+     
+     "name":"Striped Bed Sheets",
+     
+     "brand":"Amazon",
+     
+     "price":32.99,
+     
+     "salePrice":null,
+     
+     "image":"images/stripedsheets.webp",
+     
+     "description":
+     "Love these striped sheets in beige for the spare bedroom. I get complients all the time!",
+     
+     "amazon":
+         "https://amzn.to/4gF0Yje" 
+},
+
+{
+    "id":5,
+     
+     "featured":false,
+     
+     "room":"Bedroom",
+     
+     "category":"Bedding",
+     
+     "badge":"Products",
+     
+     "name":"Striped Bed Sheets",
+     
+     "brand":"Amazon",
+     
+     "price":15.99,
+     
+     "salePrice":null,
+     
+     "image":"images/measuringcups.webp",
+     
+     "description":
+     "I changed most of my kitchen tools to stainless steel including my measuring cups.",
+     
+     "amazon":
+         "https://amzn.to/459vZEU" 
+}
+]
