@@ -3,146 +3,46 @@
    script.js
    PART 1
 =========================================================== */
+let products = [];
 
-const products = [
+async function loadProducts(){
 
-    {
-        id:1,
+function getFeaturedProducts(){
+
+    return products.filter(product => product.featured);
     
-        featured:true,
-    
-        badge:"Best Seller",
-    
-        category:"Cleaning",
-    
-        name:"Scrub Daddy Sponge",
-    
-        rating:4.9,
-    
-        reviews:"315k",
-    
-        price:"$3.99",
-    
-        image:"images/scrub-daddy.webp",
-    
-        description:
-        "The only sponge I consistently buy. It cleans everything without scratching.",
-    
-        why:[
-            "Hard in cold water",
-            "Soft in warm water",
-            "Lasts for weeks"
-        ],
-    
-        amazon:"https://YOURAFFILIATELINK.com",
-    
-        video:"https://amazon.com/live"
-    
-    },
-    
-    {
-        id:2,
-    
-        featured:true,
-    
-        badge:"My Favorite",
-    
-        category:"Kitchen",
-    
-        name:"Electric Kettle",
-    
-        rating:4.8,
-    
-        reviews:"52k",
-    
-        price:"$39.99",
-    
-        image:"images/kettle.webp",
-    
-        description:
-        "Boils water incredibly fast for coffee, tea and cooking.",
-    
-        why:[
-            "Fast boiling",
-            "Auto shutoff",
-            "Looks beautiful"
-        ],
-    
-        amazon:"https://YOURAFFILIATELINK.com",
-    
-        video:""
-    
-    },
-    
-    {
-        id:3,
-    
-        featured:false,
-    
-        badge:"Amazon Choice",
-    
-        category:"Bathroom",
-    
-        name:"Luxury Shower Head",
-    
-        rating:4.7,
-    
-        reviews:"18k",
-    
-        price:"$49.99",
-    
-        image:"images/shower.webp",
-    
-        description:
-        "Easy installation and significantly improves water pressure.",
-    
-        why:[
-            "High pressure",
-            "Easy install",
-            "Modern look"
-        ],
-    
-        amazon:"https://YOURAFFILIATELINK.com",
-    
-        video:""
-    
-    },
-    
-    {
-        id:4,
-    
-        featured:true,
-    
-        badge:"Must Have",
-    
-        category:"Office",
-    
-        name:"Standing Desk",
-    
-        rating:4.9,
-    
-        reviews:"44k",
-    
-        price:"$299",
-    
-        image:"images/desk.webp",
-    
-        description:
-        "One of the best upgrades for working from home.",
-    
-        why:[
-            "Quiet motor",
-            "Memory presets",
-            "Solid construction"
-        ],
-    
-        amazon:"https://YOURAFFILIATELINK.com",
-    
-        video:""
-    
+}
+
+    try{
+
+        const response = await fetch("data/products.json");
+
+        products = await response.json();
+
+        console.log("Loaded Products:", products);
+
+        const isProductsPage =
+            window.location.pathname.includes("products.html");
+
+if(isProductsPage){
+
+    filterProducts();
+
+}else{
+
+    renderProducts(getFeaturedProducts());
+
+}
+
     }
-    
-    ];
+
+    catch(error){
+
+        console.error(error);
+
+    }
+
+};
     
     /* ===========================================================
        DOM
@@ -177,9 +77,10 @@ function renderProducts(productArray){
 <div class="product-image">
 
     <img
-        src="${product.image}"
-        loading="lazy"
-        alt="${product.name}"
+    src="${product.image}"
+    alt="${product.name}"
+    loading="lazy"
+    onerror="this.src='images/placeholder.webp'"
     >
 
     <div class="product-badge">
@@ -212,31 +113,11 @@ function renderProducts(productArray){
 
     </h3>
 
-    <div class="product-rating">
-
-        ★★★★★
-
-        <span>
-
-            ${product.rating} (${product.reviews})
-
-        </span>
-
-    </div>
-
     <p class="product-description">
 
         ${product.description}
 
     </p>
-
-    <ul class="product-benefits">
-
-        ${product.why
-            .map(item => `<li>${item}</li>`)
-            .join("")}
-
-    </ul>
 
     <div class="product-footer">
 
@@ -244,7 +125,7 @@ function renderProducts(productArray){
 
             <strong>
 
-                ${product.price}
+                $${Number(product.price).toFixed(2)}
 
             </strong>
 
@@ -268,26 +149,6 @@ function renderProducts(productArray){
 
             </a>
 
-            ${
-                product.video
-                ?
-
-                `<a
-                    class="btn-outline"
-                    href="${product.video}"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    Watch Review
-
-                </a>`
-
-                :
-
-                ""
-
-            }
-
         </div>
 
     </div>
@@ -301,12 +162,6 @@ function renderProducts(productArray){
     });
 
 }
-    
-    /* ===========================================================
-       Initial Render
-    =========================================================== */
-    
-    renderProducts(products);
 
 /* ===========================================================
    PART 2
@@ -349,9 +204,11 @@ function filterProducts(){
 
             ||
 
-            product.description
-                .toLowerCase()
-                .includes(searchQuery.toLowerCase());
+            (product.description || "")
+
+    .toLowerCase()
+
+    .includes(searchQuery.toLowerCase())
 
         return matchesCategory && matchesSearch;
 
@@ -360,10 +217,11 @@ function filterProducts(){
     filtered.sort((a,b)=>{
 
         if(a.featured && !b.featured) return -1;
+    
         if(!a.featured && b.featured) return 1;
-
-        return b.rating-a.rating;
-
+    
+        return a.name.localeCompare(b.name);
+    
     });
 
     renderProducts(filtered);
@@ -471,11 +329,9 @@ function attachFavoriteEvents(){
         .querySelectorAll(".favorite-btn")
         .forEach((button,index)=>{
 
-            const product =
+                const card = button.closest(".product-card");
 
-                document.querySelectorAll(".product-card")[index];
-
-            const id = products[index]?.id;
+                const id = Number(card.dataset.id);
 
             if(!id) return;
 
@@ -653,4 +509,4 @@ renderProducts = function(list){
    INITIALIZE
 =========================================================== */
 
-filterProducts();
+loadProducts();
