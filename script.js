@@ -5,13 +5,13 @@
 =========================================================== */
 let products = [];
 
-async function loadProducts(){
-
 function getFeaturedProducts(){
 
     return products.filter(product => product.featured);
     
 }
+
+async function loadProducts(){
 
     try{
 
@@ -24,8 +24,7 @@ function getFeaturedProducts(){
         const path = window.location.pathname.toLowerCase();
 
         const isProductsPage =
-            path.endsWith("/products") ||
-            path.endsWith("/products.html");
+            path.includes("products")
 
 if(isProductsPage){
 
@@ -203,8 +202,9 @@ function filterProducts(){
     let filtered = products.filter(product=>{
 
         const matchesCategory =
-            selectedCategory==="All" ||
-            product.category===selectedCategory;
+            selectedCategory === "All" ||
+            product.category.toLowerCase() ===
+            selectedCategory.toLowerCase();
 
         const matchesSearch =
 
@@ -393,6 +393,7 @@ if(savedTheme==="dark"){
     darkModeToggle.innerHTML="☀️";
 
 }
+if(darkModeToggle){
 
 darkModeToggle.addEventListener("click",()=>{
 
@@ -413,7 +414,7 @@ darkModeToggle.addEventListener("click",()=>{
         dark ? "☀️" : "🌙";
 
 });
-
+}
 /* ===========================================================
    SCROLL TO TOP
 =========================================================== */
