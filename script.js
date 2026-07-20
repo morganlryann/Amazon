@@ -21,8 +21,11 @@ function getFeaturedProducts(){
 
         console.log("Loaded Products:", products);
 
+        const path = window.location.pathname.toLowerCase();
+
         const isProductsPage =
-            window.location.pathname.includes("products.html");
+            path.endsWith("/products") ||
+            path.endsWith("/products.html");
 
 if(isProductsPage){
 
@@ -191,10 +194,10 @@ document
     .getElementById("searchButton")
     .addEventListener("click", () => {
 
-        loadProducts();
+        filterProducts();
 
     });
-    
+
 function filterProducts(){
 
     let filtered = products.filter(product=>{
