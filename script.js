@@ -187,7 +187,14 @@ let searchQuery = "";
 /* ===========================================================
    FILTER PRODUCTS
 =========================================================== */
+document
+    .getElementById("searchButton")
+    .addEventListener("click", () => {
 
+        loadProducts();
+
+    });
+    
 function filterProducts(){
 
     let filtered = products.filter(product=>{
