@@ -57,7 +57,8 @@ if(isProductsPage){
 =========================================================== */
 
 function renderProducts(productArray){
-
+    console.log("Rendering", productArray.length, "products");
+    
     productGrid.innerHTML = "";
 
     productArray.forEach(product=>{
@@ -233,6 +234,9 @@ function filterProducts(){
         return a.name.localeCompare(b.name);
     
     });
+
+    console.log("Filtered products:", filtered.length);
+    console.log(filtered);
 
     renderProducts(filtered);
 
