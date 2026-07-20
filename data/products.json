@@ -11,12 +11,8 @@
         "badge":"Best Seller",
         
         "name":"5-Gallon Vacmaster",
-        
-        "brand":"Vacmaster",
-        
+                
         "price":74.99,
-        
-        "salePrice":null,
         
         "image":"images/vacmaster.webp",
         
@@ -38,13 +34,9 @@
         "badge":"Favorite",
         
         "name":"Standing Desk",
-        
-        "brand":"Flexispot",
-        
+                
         "price":104.49,
-        
-        "salePrice":null,
-        
+                
         "image":"images/standingdesk.webp",
         
         "description":
@@ -66,13 +58,9 @@
         "badge":"Featured",
         
         "name":"Ninja Creami Ice Cream Maker",
-        
-        "brand":"Ninja",
-        
+                
         "price":219.99,
-        
-        "salePrice":null,
-        
+                
         "image":"images/ninjacreami.webp",
         
         "description":
@@ -94,13 +82,9 @@
          "badge":"Products",
          
          "name":"Mini Under Desk Elliptical",
-         
-         "brand":"Amazon",
-         
+                  
          "price":89.96,
-         
-         "salePrice":null,
-         
+                  
          "image":"images/deskelliptical.webp",
          
          "description":
@@ -122,12 +106,9 @@
      "badge":"Products",
      
      "name":"Striped Bed Sheets",
-     
-     "brand":"Amazon",
-     
+          
      "price":32.99,
      
-     "salePrice":null,
      
      "image":"images/stripedsheets.webp",
      
@@ -139,20 +120,41 @@
 },
 
 {
-    "id":5,
+    "id":6,
      
      "featured":false,
      
-     "room":"Bedroom",
+     "room":"Kitchen",
      
-     "category":"Bedding",
+     "category":"Cooking",
      
      "badge":"Products",
      
-     "name":"Striped Bed Sheets",
+     "name":"Metal Measuring cups",
+          
+     "price":15.99,
+          
+     "image":"images/measuringcups.webp",
      
-     "brand":"Amazon",
+     "description":
+     "I changed most of my kitchen tools to stainless steel including my measuring cups.",
      
+     "amazon":
+         "https://amzn.to/45dD1Zg" 
+},
+{
+    "id":7,
+     
+     "featured":false,
+     
+     "room":"Kitchen",
+     
+     "category":"Cooking",
+     
+     "badge":"Products",
+     
+     "name":"Metal Spatulas",
+          
      "price":15.99,
      
      "salePrice":null,
@@ -163,6 +165,746 @@
      "I changed most of my kitchen tools to stainless steel including my measuring cups.",
      
      "amazon":
-         "https://amzn.to/459vZEU" 
+         "https://amzn.to/4whBP32" 
+},
+{
+    "id":8,
+    
+    "featured":false,
+    
+    "room":"Laundry",
+    
+    "category":"Cleaning",
+    
+    "badge":"Products",
+    
+    "name":"Outdoor Clothing Line",
+        
+    "price":29.99,
+    
+    "salePrice":null,
+    
+    "image":"images/outdoorclothingline.webp",
+    
+    "description":
+    "Love to air try my clothes during the summer months on the east coast!",
+    
+    "amazon":
+        "https://amzn.to/4bCbHHN"
+},
+{
+    "id":9,
+    
+    "featured":false,
+    
+    "room":"Outdoors",
+    
+    "category":"Summer Fun",
+    
+    "badge":"Products",
+    
+    "name":"Foldable outside dog pool",
+    
+    "price":33.99,
+        
+    "image":"images/vacmaster.webp",
+    
+    "description":
+    "The dogs love this pool! Easy to put together, foldable so I can bring it wherever!",
+    
+    "amazon":
+        "https://amzn.to/4fInAhI"
+},
+{
+    "id":10,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Cleaning",
+    
+    "badge":"Products",
+    
+    "name":"Hard Floor Spin Mop",
+    
+    "brand":"Vacmaster",
+    
+    "price":124.99,
+        
+    "image":"images/spinwavehardfloor.webp",
+    
+    "description":
+    "My hard wood floors have never looked better with the dogs!",
+    
+    "amazon":
+        "https://amzn.to/4wcobON"
+},
+{
+    "id":11,
+    
+    "featured":false,
+    
+    "room":"Pet",
+    
+    "category":"Pet",
+    
+    "badge":"Products",
+    
+    "name":"Pet Feeding Mat",
+        
+    "price":25.99,
+        
+    "image":"images/petfeedingmat.webp",
+    
+    "description":
+    "Great little mat for messy cat eaters!",
+    
+    "amazon":
+        "https://amzn.to/4yvl9Xo"
+},
+{
+    "id":12,
+    
+    "featured":false,
+    
+    "room":"Bathroom",
+    
+    "category":"Self Care",
+    
+    "badge":"Products",
+    
+    "name":"Laser Hair Removal",
+    
+    "price":79.99,
+        
+    "image":"images/laserhairremoval.webp",
+    
+    "description":
+    "Goodbye armpit and bikini line hair!",
+    
+    "amazon":
+        "https://amzn.to/3T8DiKw"
+},
+{
+    "id":13,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Cleaning",
+    
+    "badge":"Products",
+    
+    "name":"Broom and Dust Pan Set",
+        
+    "price":74.99,
+        
+    "image":"images/broomanddustpan.webp",
+    
+    "description":
+    "Love the color! Great set for the kitchen.",
+    
+    "amazon":
+        "https://amzn.to/4wSUKRH"
+},
+{
+    "id":14,
+    
+    "featured":false,
+    
+    "room":"Closet",
+    
+    "category":"Clothing",
+    
+    "badge":"Products",
+    
+    "name":"4 Pack Cotton Summer Shorts",
+        
+    "price":35.99,
+        
+    "image":"images/womensshortfourpack.webp",
+    
+    "description":
+    "These shorts are so comfy, they're easy to throw on with any basic top.",
+    
+    "amazon":
+        "https://amzn.to/44HSAZ4"
+},
+{
+    "id":15,
+    
+    "featured":false,
+    
+    "room":"Closet",
+    
+    "category":"Clothing",
+    
+    "badge":"Products",
+    
+    "name":"4 Pack Biker Shorts",
+        
+    "price":24.99,
+        
+    "image":"images/bikershortspack.webp",
+    
+    "description":
+    "I wear these under shorts for running, around the house with a baggy top and running to the store.",
+    
+    "amazon":
+        "https://amzn.to/4whDbe8"
+},
+{
+    "id":16,
+    
+    "featured":false,
+    
+    "room":"Kitchen",
+    
+    "category":"Food",
+    
+    "badge":"Products",
+    
+    "name":"OWYN 20g Protein Shake",
+        
+    "price":38.99,
+        
+    "image":"images/owynshakes.webp",
+    
+    "description":
+    "These shakes helped with my 74 year old dad's energy and muscle cramps!",
+    
+    "amazon":
+        "https://amzn.to/3T4LKdH"
+},
+{
+    "id":17,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Work From Home",
+    
+    "badge":"Products",
+    
+    "name":"Standing Desk with Wheels",
+        
+    "price":59.99,
+        
+    "image":"images/smallstandingdesk.webp",
+    
+    "description":
+    "For all my work from home people, this desk is great!",
+    
+    "amazon":
+        "https://amzn.to/4aWq1L6" 
+},
+{
+    "id":18,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Pets",
+    
+    "badge":"Products",
+    
+    "name":"Cat Window Hammock",
+        
+    "price":25.99,
+        
+    "image":"images/windowcatbed.webp",
+    
+    "description":
+    "My cats love watching the birds from this bed.",
+    
+    "amazon":
+        "https://amzn.to/4b4AkN3" 
+},
+{
+    "id":19,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Pets",
+    
+    "badge":"Products",
+    
+    "name":"Cat Window Hammock",
+        
+    "price":25.99,
+        
+    "image":"images/floralcattunnel.webp",
+    
+    "description":
+    "It's cute and my cats love it, it's a win-win.",
+    
+    "amazon":
+        "https://amzn.to/4ffwC4k" 
+},
+{
+    "id":20,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Pets",
+    
+    "badge":"Products",
+    
+    "name":"Cat Climbing Tower",
+        
+    "price":49.99,
+        
+    "image":"images/cattower.webp",
+    
+    "description":
+    "Easy to build, good quality, fits great in the corner.",
+    
+    "amazon":
+        "https://amzn.to/4wQktdk" 
+},
+{
+    "id":21,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Bedding",
+    
+    "badge":"Products",
+    
+    "name":"Boho Throw Pillow Covers",
+        
+    "price":9.99,
+        
+    "image":"images/throwpillowcovers.webp",
+    
+    "description":
+    "Clean, stylish covers. Love the texture with the beige.",
+    
+    "amazon":
+        "https://amzn.to/45bjRmL" 
+},
+{
+    "id":22,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Cleaning",
+    
+    "badge":"Products",
+    
+    "name":"Pet Air Purifier",
+        
+    "price":89.99,
+        
+    "image":"images/petairpurifier.webp",
+    
+    "description":
+    "It's small but mighty! You'll be surprised what this things pulls in if you have pets.",
+    
+    "amazon":
+        "https://amzn.to/4fkySJb" 
+},
+{
+    "id":23,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Design",
+    
+    "badge":"Products",
+    
+    "name":"Artificial Olive Tree",
+        
+    "price":65.99,
+        
+    "image":"images/olivetreefake.webp",
+    
+    "description":
+    "I love how much character this tree adds any room.",
+    
+    "amazon":
+        "https://amzn.to/4wXkcFP" 
+},
+{
+    "id":24,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Cleaning",
+    
+    "badge":"Products",
+    
+    "name":"Deluxe Carpet Cleaning Machine",
+        
+    "price":239.99,
+        
+    "image":"images/hovercleaner.webp",
+    
+    "description":
+    "This is a game changer if you have carpeting in your house, especially if you have pets.",
+    
+    "amazon":
+        "https://amzn.to/4bSH2pI" 
+},
+{
+    "id":25,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Pets",
+    
+    "badge":"Products",
+    
+    "name":"Cat Scratching Post",
+        
+    "price":9.99,
+        
+    "image":"images/catscratchingpost.webp",
+    
+    "description":
+    "These are a must have if your cat likes to scratch.",
+    
+    "amazon":
+        "https://amzn.to/4wQgPAc"
+},
+{
+    "id":26,
+    
+    "featured":false,
+    
+    "room":"Office",
+    
+    "category":"Self Care",
+    
+    "badge":"Products",
+    
+    "name":"Anti Fatigue Mat",
+        
+    "price":24.99,
+        
+    "image":"images/antifatiquemat.webp",
+    
+    "description":
+    "This has been great for working at my standing desk vs standing on the hardwood floor.",
+    
+    "amazon":
+        "https://amzn.to/4bwYBeQ"
+},
+{
+    "id":27,
+    
+    "featured":false,
+    
+    "room":"Bedroom",
+    
+    "category":"Closet",
+    
+    "badge":"Products",
+    
+    "name":"Basic Sewing Kit",
+        
+    "price":6.27,
+        
+    "image":"images/sewingkit.webp",
+    
+    "description":
+    "This kit has all your essentials or if you're just getting started with embroidary.",
+    
+    "amazon":
+        "https://amzn.to/4ftMJvn"
+},
+{
+    "id":28,
+    
+    "featured":false,
+    
+    "room":"Kitchen",
+    
+    "category":"Cups",
+    
+    "badge":"Products",
+    
+    "name":"Floral Tumbler with Straw",
+        
+    "price":36.99,
+        
+    "image":"images/greentumbler.webp",
+    
+    "description":
+    "It's cute, I get compliments all the time!",
+    
+    "amazon":
+        "https://amzn.to/4b1t30w"
+},
+{
+    "id":29,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Office",
+    
+    "badge":"Products",
+    
+    "name":"Folding Table",
+        
+    "price":18.99,
+        
+    "image":"images/greentumbler.webp",
+    
+    "description":
+    "Great little table to bring outside to put your drinks on.",
+    
+    "amazon":
+        "https://amzn.to/4ptkem5" 
+},
+{
+    "id":29,
+    
+    "featured":false,
+    
+    "room":"Outside",
+    
+    "category":"Lights",
+    
+    "badge":"Products",
+    
+    "name":"Solar Fairy Lights",
+        
+    "price":17.99,
+        
+    "image":"images/solarfairylights.webp",
+    
+    "description":
+    "Cute addition to your patio for summer nights, and can be used for Christmas!",
+    
+    "amazon":
+        "https://amzn.to/3TagFVZ" 
+},
+{
+    "id":30,
+    
+    "featured":false,
+    
+    "room":"Outside",
+    
+    "category":"Outside",
+    
+    "badge":"Products",
+    
+    "name":"Portable Umbrella with Stand",
+        
+    "price":56.99,
+        
+    "image":"images/umbrellastand.webp",
+    
+    "description":
+    "Easy to use, and portable. I use this when I'm sitting outside reading or by the pool.",
+    
+    "amazon":
+        "https://amzn.to/4fNpCMH" 
+},
+{
+    "id":31,
+    
+    "featured":false,
+    
+    "room":"Closet",
+    
+    "category":"Shoes",
+    
+    "badge":"Products",
+    
+    "name":"Water Resistent Pool Sandals",
+        
+    "price":44.99,
+        
+    "image":"images/poolslides.webp",
+    
+    "description":
+    "I get compliments all the time when I wear these to the pool.",
+    
+    "amazon":
+        "https://amzn.to/3T7tWP3" 
+},
+{
+    "id":32,
+    
+    "featured":false,
+    
+    "room":"Closet",
+    
+    "category":"Shoes",
+    
+    "badge":"Products",
+    
+    "name":"Collapsable Hard Cooler",
+        
+    "price":219.99,
+        
+    "image":"images/collapsiblecooler.webp",
+    
+    "description":
+    "Light weight, collaspible, can hold up to 200 pounds, 45 qts.",
+    
+    "amazon":
+        "https://amzn.to/4wWq1Ds"
+},
+{
+    "id":33,
+    
+    "featured":false,
+    
+    "room":"Office",
+    
+    "category":"Lights",
+    
+    "badge":"Products",
+    
+    "name":"Dimmable floor lamps",
+        
+    "price":57.99,
+        
+    "image":"images/tallcornerlight.webp",
+    
+    "description":
+    "Easy to assemble, great office light!",
+    
+    "amazon":
+        "https://amzn.to/44zqdwd"
+},
+{
+    "id":34,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Lights",
+    
+    "badge":"Products",
+    
+    "name":"Smart Floor Lamp",
+        
+    "price":75.99,
+        
+    "image":"images/smartlamp.webp",
+    
+    "description":
+    "Easy to assemble, love that I can stream music!",
+    
+    "amazon":
+        "https://amzn.to/4wVuiqH"
+},
+{
+    "id":35,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Bedding",
+    
+    "badge":"Products",
+    
+    "name":"100% Cotton Waffle Blanket",
+        
+    "price":25.99,
+        
+    "image":"images/waffleblanket.webp",
+    
+    "description":
+    "Great throw blanket, nice and light.",
+    
+    "amazon":
+        "https://amzn.to/4b5sAdQ"
+},
+{
+    "id":36,
+    
+    "featured":false,
+    
+    "room":"Closet",
+    
+    "category":"Clothing",
+    
+    "badge":"Products",
+    
+    "name":"Carhartt T-shirt",
+        
+    "price":19.99,
+        
+    "image":"images/carharttshirt.webp",
+    
+    "description":
+    "Soft, great basic to add to your closet. My dad likes the pocket in the front.",
+    
+    "amazon":
+        "https://amzn.to/4vCbJXa"
+},
+{
+    "id":37,
+    
+    "featured":false,
+    
+    "room":"Outdoors",
+    
+    "category":"Toy",
+    
+    "badge":"Products",
+    
+    "name":"Unicorn Pool Floatie",
+        
+    "price":31.99,
+        
+    "image":"images/unicornpooltoy.webp",
+    
+    "description":
+    "This is such a fun gift or pool toy, highly recommend. It's a total crowd pleaser!",
+    
+    "amazon":
+        "https://amzn.to/3TL8kYT"
+},
+{
+    "id":38,
+    
+    "featured":false,
+    
+    "room":"Outdoors",
+    
+    "category":"Food",
+    
+    "badge":"Products",
+    
+    "name":"Charcoal Grill",
+        
+    "price":114.99,
+        
+    "image":"images/charcoalgrill.webp",
+    
+    "description":
+    "Affordable, easy to use and easy to clean.",
+    
+    "amazon":
+        "https://amzn.to/4yAKGOY"
 }
 ]
