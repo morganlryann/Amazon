@@ -906,5 +906,189 @@
     
     "amazon":
         "https://amzn.to/4yAKGOY"
+},
+{
+    "id":39,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Organization",
+    
+    "badge":"Products",
+    
+    "name":"Large Blanket Basket",
+        
+    "price":23.99,
+        
+    "image":"images/blanketbin.webp",
+    
+    "description":
+    "This basket is great, I feel more organized having a dedicated bin for my blankets.",
+    
+    "amazon":
+        "https://amzn.to/4fNhsVA"
+},
+{
+    "id":40,
+    
+    "featured":false,
+    
+    "room":"Laundry",
+    
+    "category":"Organization",
+    
+    "badge":"Products",
+    
+    "name":"Woven Tall Laundry Basket",
+        
+    "price":114.99,
+        
+    "image":"images/weavebaskettall.webp",
+    
+    "description":
+    "Love this for my bathroom. I throw everything in there and don't feel as embarrassed carrying it down the street to the laundry mat.",
+    
+    "amazon":
+        "https://amzn.to/3RPakig"
+},
+{
+    "id":41,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Organization",
+    
+    "badge":"Products",
+    
+    "name":"Bookshelf Storage Rack",
+        
+    "price":39.99,
+        
+    "image":"images/bookshelf.webp",
+    
+    "description":
+    "I use mine for books, ceramics, and other art pieces. I love how creative you can get with this shelf.",
+    
+    "amazon":
+        "https://amzn.to/4pzhWBO"
+},
+{
+    "id":42,
+    
+    "featured":false,
+    
+    "room":"Closet",
+    
+    "category":"Organization",
+    
+    "badge":"Products",
+    
+    "name":"6 Pack Closet Organizers and Storage",
+        
+    "price":21.99,
+        
+    "image":"images/storagebins.webp",
+    
+    "description":
+    "Great for storing clothes. I use mine to store and switch out between seasons!",
+    
+    "amazon":
+        "https://amzn.to/4hrMP9m"
+},
+{
+    "id":43,
+    
+    "featured":false,
+    
+    "room":"Closet",
+    
+    "category":"Organization",
+    
+    "badge":"Products",
+    
+    "name":"Wine Bar and Storage Cabinet",
+        
+    "price":209.99,
+        
+    "image":"images/whitedresser.webp",
+    
+    "description":
+    "Great for storing clothes. I use mine to store and switch out between seasons!",
+    
+    "amazon":
+        "https://amzn.to/4yPFGpQ"
+},
+{
+    "id":43,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Decor",
+    
+    "badge":"Products",
+    
+    "name":"Decorative Girl Thinker Bookends",
+        
+    "price":33.29,
+        
+    "image":"images/whitedresser.webp",
+    
+    "description":
+    "Aesthetically pleasing, love these book stoppers.",
+    
+    "amazon":
+        "https://amzn.to/4pzip72"
+},
+{
+    "id":44,
+    
+    "featured":false,
+    
+    "room":"Kitchen",
+    
+    "category":"Decor",
+    
+    "badge":"Products",
+    
+    "name":"Cookbook Stand",
+        
+    "price":8.99,
+        
+    "image":"images/bookholder.webp",
+    
+    "description":
+    "I always have an open cookbook in my kitchen now. I'm constantly getting compliments.",
+    
+    "amazon":
+        "https://amzn.to/4pzip72"
+},
+{
+    "id":45,
+    
+    "featured":false,
+    
+    "room":"Living Room",
+    
+    "category":"Hobbies",
+    
+    "badge":"Products",
+    
+    "name":"DIY Miniature Bookstore",
+        
+    "price":26.99,
+        
+    "image":"images/buildabookstoreowl.webp",
+    
+    "description":
+    "This is a great DIY to do solo or with someone!",
+    
+    "amazon":
+        "https://amzn.to/4ySCZnx"
 }
 ]
